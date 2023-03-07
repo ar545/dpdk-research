@@ -15,8 +15,11 @@ python --version
 
 reqs:
 apt install meson
+
 apt install ninja-build
-apt install pyelftools
+
+apt install python3-pyelftools
+
 apt install libnuma-dev
 
 Huge pages:
