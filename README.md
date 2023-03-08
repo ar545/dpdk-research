@@ -52,3 +52,16 @@ cat ~/.ssh/id_ed25519.pub
 
 
 ldconfig
+
+## setup NIC:
+ cd dpdk-stable-22.11.1/
+   90  ls
+   91  ./usertools/dpdk-devbind.py --status
+   92  ip link set dev enp6sofo down
+   93  ip link set dev enp6s0f0 down
+   94  ./usertools/dpdk-devbind.py --status
+   95  echo 1 > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode
+   96  ./usertools/dpdk-devbind.py --bind=vfio-pci enp6s0f0
+   97  ./usertools/dpdk-devbind.py --bind=vfio-pci 0000:06:00.0
+   98  ifconfig
+   99  ./usertools/dpdk-devbind.py --status
