@@ -56,17 +56,17 @@ ldconfig
 ## setup NIC:
  cd dpdk-stable-22.11.1/
 
-   91  ./usertools/dpdk-devbind.py --status
+   ./usertools/dpdk-devbind.py --status
 
-   93  ip link set dev enp6s0f0 down
+   ip link set dev enp6s0f0 down
    
-   94  ./usertools/dpdk-devbind.py --status
+   ./usertools/dpdk-devbind.py --status ( ../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py --status)
    
-   95  echo 1 > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode
+   echo 1 > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode
    
-   96  ./usertools/dpdk-devbind.py --bind=vfio-pci enp6s0f0
+   96  ./usertools/dpdk-devbind.py --bind=vfio-pci enp6s0f0 (../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py --bind=vfio-pci enp6s0f0)
    
-   97  ./usertools/dpdk-devbind.py --bind=vfio-pci 0000:06:00.0
+   97  ./usertools/dpdk-devbind.py --bind=vfio-pci 0000:06:00.0 (../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py --bind=vfio-pci 0000:06:00.0)
    
    98  ifconfig
    
@@ -74,3 +74,15 @@ ldconfig
    
    ## info:
    https://docs.google.com/document/d/1VDzg9zsM2JPhYn_QEuc1rGJJd0fpWVNZznAM2qUcLu8/edit
+   
+../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py -u 06:00.0
+../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py -b ixgbe 06:00.0
+ ifconfig enp6s0f0 up
+ ifconfig enp6s0f0 10.10.1.2/24 (NODE 1)
+  ifconfig enp6s0f0 10.10.1.1/24 (NODE 0)
+
+   
+   ## HELLOWORLD in playground:
+   ./helloworld/helloworld -- -r
+   ./helloworld/helloworld -- -s
+   
