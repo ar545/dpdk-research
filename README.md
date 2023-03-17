@@ -82,7 +82,14 @@ ldconfig
   ifconfig enp6s0f0 10.10.1.1/24 (NODE 0)
 
    
+# make playground helloworld
+   
+mkdir -p build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make -j $(nproc)
+cd ..
+
    ## HELLOWORLD in playground:
    ./helloworld/helloworld -- -r
    ./helloworld/helloworld -- -s
-   
