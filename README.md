@@ -46,12 +46,14 @@ ninja
 
 ninja install
 
-## setup github:
-ssh-keygen -t ed25519 -C "Ar545@github.com"
-cat ~/.ssh/id_ed25519.pub
+
 
 
 ldconfig
+
+## setup github:
+ssh-keygen -t ed25519 -C "lz527@cornell.edu";
+cat ~/.ssh/id_ed25519.pub
 
 ## setup NIC:
  cd dpdk-stable-22.11.1/
