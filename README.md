@@ -86,11 +86,7 @@ cat ~/.ssh/id_ed25519.pub
    
 # make playground helloworld
    
-mkdir -p build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make -j $(nproc)
-cd ..
+mkdir -p build; cd build; cmake -DCMAKE_BUILD_TYPE=Release ..; make -j $(nproc)
 
    ## HELLOWORLD in playground:
    ./helloworld/helloworld -- -r
