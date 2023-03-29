@@ -78,11 +78,13 @@ cat ~/.ssh/id_ed25519.pub
    https://docs.google.com/document/d/1VDzg9zsM2JPhYn_QEuc1rGJJd0fpWVNZznAM2qUcLu8/edit
    
 ../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py -u 06:00.0
-../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py -b ixgbe 06:00.0
- ifconfig enp6s0f0 up
- ifconfig enp6s0f0 10.10.1.2/24 (NODE 1)
-  ifconfig enp6s0f0 10.10.1.1/24 (NODE 0)
 
+../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py -b ixgbe 06:00.0
+
+ ifconfig enp6s0f0 up
+ 
+ ifconfig enp6s0f0 10.10.1.2/24 (NODE 1)
+ ifconfig enp6s0f0 10.10.1.1/24 (NODE 0)
    
 # make playground helloworld
    
@@ -90,4 +92,7 @@ mkdir -p build; cd build; cmake -DCMAKE_BUILD_TYPE=Release ..; make -j $(nproc)
 
    ## HELLOWORLD in playground:
    ./helloworld/helloworld -- -r
+   
+   sudo  ./helloworld/helloworld -l 0,1 -- -s
+   
    ./helloworld/helloworld -- -s
