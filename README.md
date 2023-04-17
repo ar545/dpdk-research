@@ -96,3 +96,22 @@ mkdir -p build; cd build; cmake -DCMAKE_BUILD_TYPE=Release ..; make -j $(nproc)
    sudo  ./helloworld/helloworld -l 0,1 -- -s
    
    ./helloworld/helloworld -- -s
+   
+   
+ ## libfabric
+ git clone git@github.com:Ar545/libfabric.git
+ 
+cd libfabric/
+
+./autogen.sh 
+
+./configure && sudo make && sudo make install
+
+cd util/
+
+ifconfig
+
+./fi_pingpong -p sockets
+
+./fi_pingpong -p sockets 128.105.145.179
+
