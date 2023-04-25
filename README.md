@@ -116,5 +116,7 @@ ifconfig
 ./fi_pingpong -p sockets 128.105.145.179
 
 
+sudo ./fi_pingpong -p tcp -e msg
+
 sudo ./fi_pingpong -p dpdk -e msg -d 0000:06:00.1
 
