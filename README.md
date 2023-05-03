@@ -56,6 +56,7 @@ ssh-keygen -t ed25519 -C "lz527@cornell.edu";
 cat ~/.ssh/id_ed25519.pub
 
 ## setup NIC:
+```
  cd dpdk-stable-22.11.1/
 
    ./usertools/dpdk-devbind.py --status
@@ -66,14 +67,12 @@ cat ~/.ssh/id_ed25519.pub
    
    echo 1 > /sys/module/vfio/parameters/enable_unsafe_noiommu_mode
    
-   96  ./usertools/dpdk-devbind.py --bind=vfio-pci enp6s0f0 (../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py --bind=vfio-pci enp6s0f0)
+   ./usertools/dpdk-devbind.py --bind=vfio-pci enp6s0f0 (../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py --bind=vfio-pci enp6s0f0)
    
-   97  ./usertools/dpdk-devbind.py --bind=vfio-pci 0000:06:00.0 (../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py --bind=vfio-pci 0000:06:00.0)
+   ./usertools/dpdk-devbind.py --bind=vfio-pci 0000:06:00.0 (../../dpdk-stable-22.11.1/usertools/dpdk-devbind.py --bind=vfio-pci 0000:06:00.0)
    
-   98  ifconfig
-   
-   99  ./usertools/dpdk-devbind.py --status
-   
+./usertools/dpdk-devbind.py --status
+```   
    ## info:
    https://docs.google.com/document/d/1VDzg9zsM2JPhYn_QEuc1rGJJd0fpWVNZznAM2qUcLu8/edit
    
