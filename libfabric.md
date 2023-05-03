@@ -15,6 +15,7 @@ cd fabtests/
 ./autogen.sh
 ./configure --prefix=/opt/fabtests && make -j 32 && sudo make install
 ```
+[details](https://github.com/ofiwg/libfabric/tree/main/fabtests)
 
 ## Util/pingpong
 ### SERVER
