@@ -31,3 +31,13 @@ server command + {SERVER ADDRESS}
 
 ## Fabtests
 ### functional/fi_msg
+
+
+## USER [MANUAL](https://ofiwg.github.io/libfabric/v1.18.0/man/)
+### Interface
+[msg](https://ofiwg.github.io/libfabric/v1.18.0/man/fi_msg.3.html)
+[completion queue](https://ofiwg.github.io/libfabric/v1.18.0/man/fi_cq.3.html)
+[fabric](https://ofiwg.github.io/libfabric/v1.18.0/man/fi_fabric.3.html)
+
+###
+[fabtest](https://ofiwg.github.io/libfabric/v1.18.0/man/fabtests.7.html)
