@@ -30,6 +30,20 @@ find ip address through `ifconfig`
 ### CLIENT
 server command + {SERVER ADDRESS}
 
+### util/test
+Server ```
+   sudo ./fi_test info dpdk 0000:5e:00.0
+   sudo ./fi_test server dpdk 0000:5e:00.0
+   sudo ./fi_test server tcp 0000:5e:00.0
+   sudo ./fi_test server sockets 0000:5e:00.0
+   ```
+Client```
+   sudo ./fi_test client dpdk 0000:5e:00.0 10.0.0.1:2509
+   sudo ./fi_test client tcp 0000:5e:00.0 10.0.0.1:2509
+   sudo ./fi_test client sockets 0000:5e:00.0 10.0.0.1:2509
+   ```
+
+
 ## Fabtests
 ### functional/fi_msg
 
